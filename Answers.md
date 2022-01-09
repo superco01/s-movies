@@ -2,7 +2,7 @@
 1. simple database querying
 SELECT a.id, a.name, a.parent as parentId, b.name as parentName FROM member as a LEFT JOIN member as b ON a.parent=b.id
 
-2. movie search
+2. movie search \n
 this mini project repo
 
 3. refactore code
