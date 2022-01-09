@@ -7,7 +7,7 @@ Communication between services is handled by GRPC and communication to Open API 
 ## Getting Started
 ### Movie Service
 To run this service we can start to build the main file by using this command:
-```baseh
+```bash
 cd movieService/cmd/
 go build -o ./movieService .
 ./movieService
