@@ -7,6 +7,7 @@ this mini project repo
 
 3. refactore code
 refactored code:
+```golang
 func findFirstStringInBracket(str string) string {
 	if len(str) > 0 {
 		indexFirstBracketFound := strings.Index(str, "(")
@@ -22,9 +23,10 @@ func findFirstStringInBracket(str string) string {
 	}
 	return ""
 }
+```
 
 4. anagram
-
+``` golang
 func filterAnagram(strArray []string) [][]string {
 
 	var result [][]string
@@ -74,3 +76,4 @@ func Sort(strArr []rune) {
 		return strArr[i] < strArr[j]
 	})
 }
+```
