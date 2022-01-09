@@ -3,7 +3,6 @@ package main
 import (
 	"log"
 	"net"
-	"os"
 	"search/movieService/constant"
 	"search/movieService/core"
 	grpcProto "search/movieService/grpc"
@@ -22,11 +21,11 @@ func main() {
 	grpcProto.RegisterMovieSearchServer(grpcServer, serviceController)
 	reflection.Register(grpcServer)
 
-	con, err := net.Listen(constant.NETWORK, os.Getenv(constant.KEY_ADDRESS))
+	con, err := net.Listen(constant.NETWORK, ":8000")
 	if err != nil {
 		log.Panic(err)
 	}
-	log.Println("grpc application up and running on port" + os.Getenv(constant.KEY_ADDRESS))
+	log.Println("grpc application up and running on port" + ":8000")
 
 	err = grpcServer.Serve(con)
 	if err != nil {
